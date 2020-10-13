@@ -1,26 +1,42 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <TournamentsList />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TournamentsList from '@/components/TournamentsList'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TournamentsList
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+  @import "assets/styles/fonts.css";
+  
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Graphik, serif;
+    background: black;
+  }
+  
+  @media (min-width: 576px) { 
+    .container {
+      width: 100%;
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 768px;
+    }
+  }
 </style>
